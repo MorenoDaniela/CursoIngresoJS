@@ -5,10 +5,16 @@ function mostrar()
 
 {
 	
+var person = prompt ("Introduzca su nombre") ;
 
-	
-	var person = prompt("Please enter your name") ;
-    
-	alert (person) ;
+alert (person) ;
+
+
+
+
+
+
+
+
 }
 
