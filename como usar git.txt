@@ -1,0 +1,4 @@
+PRIMER PASO git clone 
+SEGUNDO PASO git add
+TERCER PASO git commit -m "comentario del commit"
+CUARTO PASO git push
