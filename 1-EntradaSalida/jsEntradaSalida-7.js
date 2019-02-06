@@ -32,7 +32,11 @@ function restar()
 	segundoNumero = parseInt(segundoNumero) ;
 	resta = primerNumero - segundoNumero ;
 
-	
+	/*para concatenar se utiliza + en todas las funciones y no el simbolo de la funcion en si*/
+	/*se quita esta linea 
+	alert (primerNumero - segundoNumero) ;
+	no es necesaria en esta operaciòn*/
+
 	alert ("La resta es:" +resta) ;
 	
 }
@@ -50,7 +54,11 @@ function multiplicar()
 	segundoNumero = parseInt(segundoNumero) ;
 	multiplicar = primerNumero * segundoNumero ;
 
-	
+	/*para concatenar se utiliza + en todas las funciones y no el simbolo de la funcion en si*/
+	/*se quita esta linea 
+	alert (primerNumero * segundoNumero) ;
+	no es necesaria en esta operaciòn*/
+
 	alert ("La multiplicacion es:" +multiplicar) ;
 	
 }
@@ -68,7 +76,11 @@ function dividir()
 	segundoNumero = parseInt(segundoNumero) ;
 	dividir = primerNumero / segundoNumero ;
 
-	
+	/*para concatenar se utiliza + en todas las funciones y no el simbolo de la funcion en si*/
+	/*se quita esta linea 
+	alert (primerNumero / segundoNumero) ;
+	no es necesaria en esta operaciòn*/
+
 	alert ("La division es:" +dividir) ;
 	
 }
