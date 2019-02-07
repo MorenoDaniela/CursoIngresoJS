@@ -12,9 +12,11 @@ function SacarResto()
 	segundoNumero =numeroDos.value ;
 
 
-	primerNumero = parseInt(primerNumero) ;
-	segundoNumero = parseInt(segundoNumero) ;
-	SacarResto = primerNumero % segundoNumero ;
+
+
+	primerNumero = parseInt (primerNumero) ;
+	segundoNumero = parseInt (segundoNumero) ;
+	SacarResto = primerNumero / segundoNumero ;
 
 	alert ("El resto es:" +resto) ;
 }
