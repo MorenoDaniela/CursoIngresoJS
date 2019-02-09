@@ -8,7 +8,7 @@ function Sumar ()
 	var precioUno ;
 	var precioDos ;
 	var precioTres ;
-	var suma ;
+	var resultado ;
 
 
 	precioUno = document.getElementById('PrecioUno').value ;
@@ -19,9 +19,9 @@ function Sumar ()
 	precioDos = parseInt (precioDos) ;
 	precioTres = parseInt (precioTres) ;
 
-	suma = (precioUno + precioDos + precioTres) ;
+	resultado = (precioUno + precioDos + precioTres) ;
 
-	alert ("El resultado es" +suma) ;
+	alert ("El resultado es" +resultado) ;
 	
 }
 function Promedio () 

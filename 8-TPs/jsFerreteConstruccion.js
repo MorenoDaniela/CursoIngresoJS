@@ -24,6 +24,21 @@ function Rectangulo ()
 
 }
 function Circulo () 
+
+var radio ;
+var perimetro ;
+var resultado ;
+
+radio = document.getElementById('Radio').value ;
+
+radio = parseInt (radio) ;
+
+perimetro = radio * 2 * Math.PI ;
+resultado = perimetro * 3 ;
+
+alert ("Cantidad de alambre a comprar : " +resultado) ;
+
+
 {
 	
 }
