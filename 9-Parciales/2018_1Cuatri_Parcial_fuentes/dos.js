@@ -1,4 +1,5 @@
 function mostrar()
+
 {
 
 	var nombre ;
@@ -7,5 +8,9 @@ function mostrar()
 	nombre = elNombre.value ;
 	localidad = laLocalidad.value ;
 
-	alert ("Usted es : " +nombre "y vive en la localidad : " +localidad) ;
+
+	alert ("Usted es " +nombre+ " y vive en la localidad " +localidad+ ) ;
+
+
+
 }
