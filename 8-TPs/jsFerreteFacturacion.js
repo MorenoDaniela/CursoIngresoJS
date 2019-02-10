@@ -53,7 +53,7 @@ var precioUno ;
 var precioDos ;
 var precioTres ;
 var suma ;
-var resultado ;
+var PrecioFinal ;
 
 precioUno = document.getElementById('PrecioUno').value ;
 precioDos = document.getElementById('PrecioDos').value ;
@@ -64,8 +64,8 @@ precioDos = parseInt (precioDos) ;
 precioTres = parseInt (precioTres) ;
 
 suma = (precioUno + precioDos + precioTres) ;
-resultado = (suma * 121 / 100) ;
+precioFinal = (21 * 100) / suma ;
 
-alert ("Precio Final:" +resultado) ;
+alert ("Precio Final:" +precioFinal) ;
 	
 }
