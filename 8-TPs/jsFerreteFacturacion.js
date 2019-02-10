@@ -11,9 +11,9 @@ function Sumar ()
 	var resultado ;
 
 
-	precioUno = document.getElementById('PrecioUno').value ;
-	precioDos = document.getElementById('PrecioDos').value ;
-	precioTres = document.getElementByid('PrecioTres').value ;
+	precioUno = document.getElementById('PrecioUno') ;
+	precioDos = document.getElementById('PrecioDos') ;
+	precioTres = document.getElementByid('PrecioTres') ;
 
 	precioUno = parseInt (precioUno) ;
 	precioDos = parseInt (precioDos) ;
@@ -32,9 +32,9 @@ function Promedio ()
 	var suma ;
 	var promedio ;
 
-	precioUno = document.getElementById('PrecioUno').value ;
-	precioDos = document.getElementById('PrecioDos').value ;
-	precioTres = document.getElementByid('PrecioTres').value ;
+	precioUno = document.getElementById('PrecioUno') ;
+	precioDos = document.getElementById('PrecioDos') ;
+	precioTres = document.getElementByid('PrecioTres'),;
 
 	precioUno = parseInt(precioUno) ;
 	precioDos = parseInt(precioDos) ;
@@ -55,9 +55,9 @@ var precioTres ;
 var suma ;
 var PrecioFinal ;
 
-precioUno = document.getElementById('PrecioUno').value ;
-precioDos = document.getElementById('PrecioDos').value ;
-precioTres = document.getElementByid('PrecioTres').value ;
+precioUno = document.getElementById('PrecioUno') ;
+precioDos = document.getElementById('PrecioDos')  ;
+precioTres = document.getElementByid('PrecioTres') ;
 
 precioUno = parseInt (precioUno) ;
 precioDos = parseInt (precioDos) ;

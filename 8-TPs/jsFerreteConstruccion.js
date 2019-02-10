@@ -25,6 +25,8 @@ function Rectangulo ()
 }
 function Circulo () 
 
+{
+
 var radio ;
 var perimetro ;
 var resultado ;
@@ -39,7 +41,7 @@ resultado = perimetro * 3 ;
 alert ("Cantidad de alambre a comprar : " +resultado) ;
 
 
-{
+
 	
 }
 function Materiales () 
