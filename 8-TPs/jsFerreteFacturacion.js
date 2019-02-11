@@ -11,22 +11,21 @@ function Sumar ()
 	var resultado ;
 
 
-	precioUno = document.getElementById('PrecioUno').value ;
-	precioDos = document.getElementById('PrecioDos').value ;
-	precioTres = document.getElementByid('PrecioTres').value ;
+	precioUno = PrecioUno.value;
+	precioDos = PrecioDos.value ;
+	precioTres = PrecioTres.value ;
 
-	precioUno = parseInt (precioUno) ;
-	precioDos = parseInt (precioDos) ;
-	precioTres = parseInt (precioTres) ;
+	precioUno = parseInt(precioUno) ;
+	precioDos = parseInt(precioDos) ;
+	precioTres = parseInt(precioTres) ;
 
-	resultado = (precioUno + precioDos + precioTres) ;
+	resultado = precioUno + precioDos + precioTres;
 
-	alert ("El resultado es" +resultado) ;
+	alert("El resultado es " + resultado);
 	
 }
 
 function Promedio () 
-
 {
 	var precioUno ;
 	var precioDos ;
@@ -45,31 +44,30 @@ function Promedio ()
 	suma = (precioUno + precioDos + precioTres) ;
 	promedio = (suma / 3) ;
 
-	alert ("El promedio es" +promedio) ;
+	alert("El promedio es" +promedio) ;
 	
 }
 
 function PrecioFinal () 
-
 {
 
 var precioUno ;
 var precioDos ;
 var precioTres ;
 var suma2 ;
-var PrecioFinal ;
+var precioFinal ;
 
 precioUno = document.getElementById('PrecioUno').value ;
 precioDos = document.getElementById('PrecioDos').value ;
 precioTres = document.getElementByid('PrecioTres').value ;
 
-precioUno = parseInt (precioUno) ;
-precioDos = parseInt (precioDos) ;
-precioTres = parseInt (precioTres) ;
+precioUno = parseInt(precioUno) ;
+precioDos = parseInt(precioDos) ;
+precioTres = parseInt(precioTres) ;
 
 suma2 = (precioUno + precioDos + precioTres) ;
 precioFinal = (21 * 100) / suma2 ;
 
-alert ("Precio Final:" +precioFinal) ;
+alert("Precio Final:" +precioFinal) ;
 	
 }
