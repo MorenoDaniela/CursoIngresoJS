@@ -33,9 +33,9 @@ function Promedio ()
 	var suma ;
 	var promedio ;
 
-	precioUno = document.getElementById('PrecioUno').value ;
-	precioDos = document.getElementById('PrecioDos').value ;
-	precioTres = document.getElementByid('PrecioTres').value ;
+	precioUno = PrecioUno.value ;
+	precioDos = PrecioDos.value ;
+	precioTres = PrecioTres.value ;
 
 	precioUno = parseInt(precioUno) ;
 	precioDos = parseInt(precioDos) ;
@@ -57,9 +57,9 @@ var precioTres ;
 var suma2 ;
 var precioFinal ;
 
-precioUno = document.getElementById('PrecioUno').value ;
-precioDos = document.getElementById('PrecioDos').value ;
-precioTres = document.getElementByid('PrecioTres').value ;
+precioUno = PrecioUno.value ;
+precioDos = PrecioDos.value ;
+precioTres = PrecioTres.value ;
 
 precioUno = parseInt(precioUno) ;
 precioDos = parseInt(precioDos) ;

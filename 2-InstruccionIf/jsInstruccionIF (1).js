@@ -6,6 +6,8 @@ var Edad ;
 
 Edad = edad.value ;
 
+Edad = parseInt (Edad) ;
+
 if (Edad == 15)
 
 { 
