@@ -19,7 +19,9 @@ alert ("Es mayor de edad.") ;
 
 if (Edad <18)
 
-	{alert ("Es menor de edad.") ;
+	{
+
+	alert ("Es menor de edad.") ;
 
 }
 
