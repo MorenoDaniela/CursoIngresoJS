@@ -5,11 +5,11 @@ function mostrar()
 	var nombre ;
 	var localidad ; 
 
-	nombre = elNombre.value ;
-	localidad = laLocalidad.value ;
+	nombre = document.getElementById('elNombre').value ;
+	localidad = document.getElementById('laLocalidad').value ;
 
 
-	alert ("Usted es " +nombre+ " y vive en la localidad " +localidad+ ) ;
+	alert("Usted es " +nombre+ " y vive en la localidad " +localidad ) ;
 
 
 
