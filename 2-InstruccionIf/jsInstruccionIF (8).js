@@ -2,7 +2,7 @@ function mostrar()
 {
 //tomo la edad  
 
-	var Edad ;
+var Edad ;
 var Estado ;
 
 
@@ -11,9 +11,14 @@ Estado = estadoCivil.value ;
 
 Edad = parseInt (Edad) ;
 
-if (Edad < 18 && Soltero)
 
-	alert ("Es muy pequeño para no ser soltero.") ;
+if (Edad > 17 && Estado =="Soltero")
+	
+	{
+				
+	alert ("Es soltero y no es menor.") ;
+	
+	}
 
 
 }//FIN DE LA FUNCIÓN
