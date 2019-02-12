@@ -36,11 +36,11 @@ if (Edad > 17)
 		{
 			if (Edad < 13)
 			{
-				alert("Es un niño");
+				alert("Es un niño.");
 			}
 			else
 			{
-				alert("Es un adolescente");
+				alert("Es un adolescente.");
 			}
 		}
 
