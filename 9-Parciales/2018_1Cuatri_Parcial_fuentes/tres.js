@@ -11,18 +11,25 @@ function mostrar()
 	//parseo todas las variables
 	precioInicial = parseInt (precioInicial) ;
 	porcentaje = parseInt (porcentaje) ;
-	precioFinal = parseInt (precioFinal) ;
+	// esta no 
+	//precioFinal = parseInt (precioFinal) ;
 	
 
 	//regla de tres simple
 	porcentaje = (porcentaje * precioInicial) / 100 ;
 	precioFinal = precioInicial - porcentaje ;
 
+	//invierto esto 
 	//precioFinal = elPrecioFinal.value ;
-	//preguntar por qué esto no va
+	elPrecioFinal.value = precioFinal ;
+	
+	//la siguiente linea deberia ir invertida tambien si se usara
 	//precioFinal = document.getElementById('elPrecioFinal').value ;
+	//quedaria asi
+	//document.getElementById('elPrecioFinal').value = precioFinal ;
 
-	alert ("El precio Final es " +precioFinal) ;
+	//el alert no va porque se pide por id
+	//alert ("El precio Final es " +precioFinal) ;
 
 	
 
