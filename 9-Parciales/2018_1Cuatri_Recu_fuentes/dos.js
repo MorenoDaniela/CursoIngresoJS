@@ -8,10 +8,10 @@ function mostrar()
 
   nombre = elNombre.value;
   localidad = laLocalidad.value;
-  
+
   //nombre = getElementById('elNombre').value ;
   //localidad = getElementById('laLocalidad').value ;
 
-
-  alert("Usted es " + nombre + "y vive en la localidad de" + localidad +);
+// para que se muestren dos resultados en un alert el primero va encerrado entre el signo + y el segundo solo con un signo + al principio
+  alert ("Usted es " + nombre + "y vive en la localidad de" + localidad );
 }
