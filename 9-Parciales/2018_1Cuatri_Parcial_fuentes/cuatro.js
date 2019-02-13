@@ -2,25 +2,40 @@ function mostrar()
 {
 
 var numeroUno ;
-var numeroDos;
+var numeroDos ;
+var resultado ;
 
 numeroUno = prompt ("Por favor ingrese un numero") ;
 numeroDos = prompt ("Por favor ingrese un segundo numero") ;
 
 	if (numeroUno == numeroDos)
 	{
-		alert ("El "+numeroUno+ "es igual al" +numeroDos) ;
+		resultado = numeroUno + numeroDos ;
+		alert (resultado) ;
 	}
 		else 
-		{
+		{	
+			numeroUno = parseInt (numeroUno) ;
+			numeroDos = parseInt (numeroDos) ;
 
-		}
 			if (numeroUno > numeroDos)
 			{
-				alert ("numeroUno - numeroDos
+				resultado = numeroUno - numeroDos ;
+				alert (resultado) ;
 			}
 				else (numeroUno < numeroDos)
 				{
-					numeroUno + numeroDos
+					resultado = numeroUno + numeroDos ;
+					if (resultado > 10)
+
+					{
+						alert ("La suma es" +resultado+ "y supero el 10.") ;
+
+					}
+						else 
+						{
+							alert (resultado) ;
+						}
 				}
+		}
 }
