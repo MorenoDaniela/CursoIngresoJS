@@ -1,49 +1,40 @@
+//al realizar una compra, si compra de mas de dos productos realiza un descuento del 10% y si supera los $2000 se agrega un descuento adicional del 15 %, si el pago es con tarjeta y no efectivo al precio final se le agrega un 10 % de recargo
 function mostrar()
 {
 
-var numeroUno ;
-var numeroDos ;
-var resultado ;
+var compra ;
+var cantidadProductos ;
+var pagoEfectivoTarjeta ;
 
-numeroUno = prompt ("Por favor ingrese un numero") ;
-numeroDos = prompt ("Por favor ingrese un segundo numero") ;
+compra = prompt ("Por favor ingrese el monto de su compra") ;
+cantidadProductos = prompt ("Por favor ingrese la cantidad de productos comprados") ;
+pagoEfectivoTarjeta = prompt ("Si realiza su compra con efectivo ponga el numero 1, si es con tarjeta ingrese el numero 2") ;
+
+/* un solo alert en todo el codigo*/
+//parsear
+ compra = parseInt (compra) ;
+ cantidadProductos = parseInt (cantidadProductos) ;
+ pagoEfectivoTarjeta = parseInt (pagoEfectivoTarjeta) ;
 
 
-
-
-	if (numeroUno == numeroDos)
+	if (cantidadProductos > 2)
 	{
-		resultado = numeroUno + numeroDos ;
-		alert (resultado) ;
+		
+		if (compra > 2000)
+		{
+			compra = compra * 0.75 ;
+		}
+		else
+		{
+			compra =  compra * 0.9 ;
+		}
 	}
-	else 
-	{	
-		numeroUno = parseInt (numeroUno) ;
-		numeroDos = parseInt (numeroDos) ;
+	if (pagoEfectivoTarjeta == 2)
+		{
+			compra = compra * 1.1 ;
+			// compra = compra * 1,1 ; numero con coma no va
+		}
 
-			if (numeroUno > numeroDos)
+		alert ("Precio final" +compra) ;
 
-				{
-					resultado = numeroUno - numeroDos ;
-					alert (resultado) ;
-				}
-			else 
-				//(numeroUno < numeroDos) no se pone porque serian los contrarios es decir en los que el numeroDos es el mayor
-				{
-					resultado = numeroUno + numeroDos ;
-
-					if (resultado > 10)
-
-					{
-
-						alert ("La suma es " +resultado+ " y supero el 10.") ;
-
-					}
-
-					else 
-					{
-						alert (resultado) ;
-					}
-				}
-	}
 }
