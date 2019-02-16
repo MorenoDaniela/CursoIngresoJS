@@ -16,14 +16,11 @@ function CalcularPrecio ()
  	var precioFinal ;
  	var precioconIIBB ;
 
-
  	lamparas = document.getElementById('Cantidad').value ;
  	variedad = document.getElementById('Marca').value ;
- 	//precio = precio.value ;
 
  	lamparas = parseInt (lamparas) ;
  	precio = parseInt (precio) ;
- 	//precioFinal = parseInt (precioFinal) ;
 
  	precio = lamparas * 35 ;
 
@@ -49,7 +46,7 @@ function CalcularPrecio ()
  			}
  			if (lamparas == 4)
  			{
- 				if (variedad == "ArgentinaLuz"  || "FelipeLamparas")
+ 				if (variedad == "ArgentinaLuz"  || variedad == "FelipeLamparas")
  				{ 
  					precioFinal = precio * 0.75 ;
  				}
@@ -80,8 +77,10 @@ function CalcularPrecio ()
  	if (precioFinal <= 120)
  	{
  		precioconIIBB = precioFinal * 1.1 ;
+
+ 		//alert ("IIBB Usted pago " +precioconIIBB+ " siendo " +precioFinal+ " el impuesto que se pago.") ;
  	}
- 		alert ("IIBB Usted pago " +precioFinal+ "siendo" +precioconIIBB "el impuesto que se pago.") ;
+
 
  	document.getElementById('precioDescuento').value = precioFinal ;
 
