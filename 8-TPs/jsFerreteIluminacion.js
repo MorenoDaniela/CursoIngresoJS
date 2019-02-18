@@ -74,11 +74,12 @@ function CalcularPrecio ()
  				}
  			}
  		}
- 	if (precioFinal <= 120)
+ 	if (precioFinal >= 120)
  	{
- 		precioconIIBB = precioFinal * 1.1 ;
+ 		precioconIIBB = precioFinal * 0.1 ;
+ 		precioFinal = precioconIIBB + precioFinal ;
 
- 		//alert ("IIBB Usted pago " +precioconIIBB+ " siendo " +precioFinal+ " el impuesto que se pago.") ;
+ 		alert ("IIBB Usted pago " +precioconIIBB) ;
  	}
 
 
