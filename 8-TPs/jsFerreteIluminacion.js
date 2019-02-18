@@ -15,6 +15,7 @@ function CalcularPrecio ()
  	var precio ;
  	var precioFinal ;
  	var precioconIIBB ;
+ 	var desc;
 
  	lamparas = document.getElementById('Cantidad').value ;
  	variedad = document.getElementById('Marca').value ;
@@ -23,62 +24,103 @@ function CalcularPrecio ()
  	precio = parseInt (precio) ;
 
  	precio = lamparas * 35 ;
+ 	switch(lamparas)
+ 	{
+ 		case 5:
+
+	 				if (variedad == "ArgentinaLuz")
+	 				{ 
+	 					desc =  0.6 ;
+	 				}
+	 				else 
+	 				{
+	 					desc =  0.7 ;
+	 				}
+ 			break;
+ 		case 4:
+	 		switch(variedad)
+	 		{
+	 			case  "ArgentinaLuz" :
+	 			case  "FelipeLamparas" :
+	 					desc =  0.75 ;
+	 					break;
+	 			default:
+	 				desc =  0.8 ;
+	 				break;
+
+	 		}
+ 				if (variedad == "ArgentinaLuz"  || variedad == "FelipeLamparas")
+		 				{ 
+		 					desc =  0.75 ;
+		 				}
+		 				else 
+		 				{
+		 					desc =  0.8 ;
+		 				}
+ 			break;
+ 		case "lunes":
+
+ 	}
+
 
  	if (lamparas >= 6)
  	{
- 		precioFinal = precio * 0.5 ;
+ 		desc =  0.5 ;
  	}
- 		else 
- 		{
-
- 	
+ 	else 
+ 	{ 	
  			if (lamparas == 5)
  			{
- 				if (variedad == "ArgentinaLuz")
- 				{ 
- 					precioFinal = precio * 0.6 ;
- 				}
- 				else 
- 				{
- 					precioFinal = precio * 0.7 ;
- 				}
+	 				if (variedad == "ArgentinaLuz")
+	 				{ 
+	 					desc =  0.6 ;
+	 				}
+	 				else 
+	 				{
+	 					desc =  0.7 ;
+	 				}
 
- 			}
- 			if (lamparas == 4)
+ 			}else
  			{
- 				if (variedad == "ArgentinaLuz"  || variedad == "FelipeLamparas")
- 				{ 
- 					precioFinal = precio * 0.75 ;
- 				}
- 				else 
- 				{
- 					precioFinal = precio * 0.8 ;
- 				}
- 			}
- 			if (lamparas == 3)
- 			{
- 				if (variedad == "ArgentinaLuz")
- 				{
- 					precioFinal = precio * 0.85 ;
- 				}
- 				else 
- 				{	
- 					if (variedad == "FelipeLamparas")
- 					{
- 						precioFinal = precio * 0.9 ;
- 					}
- 					else 
- 					{ 
- 						precioFinal = precio * 0.95 ;
- 					}
- 				}
- 			}
- 		}
+ 					if (lamparas == 4)
+		 			{
+		 				if (variedad == "ArgentinaLuz"  || variedad == "FelipeLamparas")
+		 				{ 
+		 					desc =  0.75 ;
+		 				}
+		 				else 
+		 				{
+		 					desc =  0.8 ;
+		 				}
+		 			}else
+		 			{		 				
+			 			if (lamparas == 3)
+			 			{
+			 				if (variedad == "ArgentinaLuz")
+			 				{
+			 					desc =  0.85 ;
+			 				}
+			 				else 
+			 				{	
+			 					if (variedad == "FelipeLamparas")
+			 					{
+			 						desc = precio * 0.9 ;
+			 					}
+			 					else 
+			 					{ 
+			 						precioFinal = precio * 0.95 ;
+			 					}//if (variedad == "FelipeLamparas")
+			 				}//if (lamparas == 3)
+		 			}//if (lamparas == 4)
+ 			}//	if (lamparas == 5)
+ 		}//	if (lamparas >= 6)
+ 		
+	precioFinal = precio * desc ;
+
  	if (precioFinal >= 120)
  	{
  		precioconIIBB = precioFinal * 0.1 ;
  		precioFinal = precioconIIBB + precioFinal ;
-
  		alert ("IIBB Usted pago " +precioconIIBB) ;
  	}
 
