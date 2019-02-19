@@ -6,8 +6,8 @@ function mostrar()
 
 	{
 
-		console.log (contador) ;
 		contador = contador + 1 ;
+		console.log (contador) ; // el console log despues porque estoy sumando
 		alert (contador);
 	}
 
