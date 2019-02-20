@@ -6,6 +6,17 @@ function mostrar()
 	var negativo=1;
 	
 	var respuesta='si';
+	var numeroUno ;
+
+	while (respuesta == "si")
+		
+	{
+		numeroUno = prompt ("Ingrese un número.") ;
+		numeroUno = parseInt (numeroUno) ;
+		positivo+=numeroUno;
+		contador++;
+		respuesta = prompt ("¿Quiere ingresar otro número?") ;
+	}
 
 
 document.getElementById('suma').value=positivo;

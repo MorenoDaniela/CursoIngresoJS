@@ -5,6 +5,7 @@ function mostrar()
 	var acumulador=0;
 	var numeroUno ;
 
+// en el while va (contador < 5) porque 5 son las veces que le voy a pedir un numero
 	while (contador < 5)
 	{
 		numeroUno = prompt ("Ingrese un número.") ;
@@ -13,7 +14,8 @@ function mostrar()
 		acumulador+=numeroUno;
 	}
 
-	//acumulador+=numeroUno;
+	//acumulador+=numeroUno; no va aca porque necesito que el valor de numeroUno sea el que queda despues de sumarlos,
+	// si lo pusiera afuera del while numeroUno seria el ultimo numero que ingreso por prompt
 	
 
 

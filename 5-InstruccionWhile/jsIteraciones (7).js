@@ -7,6 +7,7 @@ function mostrar()
 	var numeroUno ;
 
 	while (respuesta == "si")
+		//si la variable es escrita no olvidar las comillas
 	{
 		numeroUno = prompt ("Ingrese un número.") ;
 		numeroUno = parseInt (numeroUno) ;
