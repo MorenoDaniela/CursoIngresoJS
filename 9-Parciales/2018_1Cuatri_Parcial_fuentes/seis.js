@@ -30,17 +30,25 @@ switch (hora)
 	case 22 :
 	case 23 :
 	case 24 :
+	case 0 :
+	case 2 :
+	case 3 :
+	case 4 :
+	case 5 :
 	mensaje = "Es de noche." ;
+
+	if ( hora > 20 && hora < 24)
+	{
+		mensaje = "Es de noche, a dormir." ;
+	}
+	
 	break ;
 	default :
 	mensaje = "La hora no es válida." ;
 	break ;
 }
 
-if (mensaje = "Es de noche." && hora < 24)
-{
-	mensaje = "A dormir." ;
-}
+
 
 alert (mensaje) ;
 
