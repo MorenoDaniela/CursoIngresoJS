@@ -14,7 +14,7 @@ function mostrar()
 		//acumulador+=numeroUno; es = que lo de abajo
 		acumulador = acumulador + numeroUno ;
 		//contador ++ ; es = que lo de abajo
-		contador = contador +1;
+		contador = contador + 1 ;
 		respuesta = prompt ("¿Quiere ingresar otro número? Responder sì.") ;
 	}
 
