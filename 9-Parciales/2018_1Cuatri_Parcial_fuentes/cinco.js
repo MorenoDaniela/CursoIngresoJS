@@ -50,36 +50,38 @@ switch (pago)
 {
 	case "visa" :
 	total = precio * 0.90 ;
-	mensaje = "Usted pago " +total ;
+	mensaje = "Usted pago " +total+ " en total." ;
 	break;
 	case "mercadopago " :
 	total = precio * 0.90 ;
-	mensaje = "Usted pago " +total ;
+	mensaje = "Usted pago " +total+ " en total." ;
 	case "paypal" :
 	total = precio * 0.85 ;
 		switch (paquete)
-
 		{
-		case "todoincluido" :
-		total = precio * 0.75 ;
-		break;
+			case "todoincluido" :
+			total = precio * 0.75 ;
+			break;
 		}
-	mensaje = "Usted pago " +total ;
+	mensaje = "Usted pago " +total+ " en total." ;
 	break;
 	case "efectivo" :
 	total = precio * 0.80 ;
 		switch (paquete)
 		{
-		case "solodesayunos" :
-		total = precio * 0.70 ;
-		case "todoincluido" :
-		total = precio * 0.65 ;
+			case "solodesayunos" :
+			total = precio * 0.70 ;
+			case "todoincluido" :
+			total = precio * 0.65 ;
 		}
-	mensaje = "Usted pago " +total ;
+	mensaje = "Usted pago " +total+ " en total."  ;
 	break;
 	case "otro" :
 	total = precio * 0.95 ;
-	mensaje = "Usted pago " +total ;
+	mensaje = "Usted pago " +total+ " en total." ;
+	break ;
+	default :
+	mensaje = "Una de las opciones ingresadas no es correcta." ;
 	break ;
 }
 alert (mensaje) ;
