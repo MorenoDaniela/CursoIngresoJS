@@ -10,8 +10,9 @@ function mostrar()
 	{
 		numeroUno = prompt ("Ingrese un número.") ;
 		numeroUno = parseInt (numeroUno) ;
-		contador++;
-		acumulador+=numeroUno;
+		contador = contador + 1 ; //Este suma literal//
+		//contador = contador + 1 ; es igual a contador ++ ;
+		acumulador= acumulador + numeroUno; //El acumulador suma variables 
 	}
 
 	//acumulador+=numeroUno; no va aca porque necesito que el valor de numeroUno sea el que queda despues de sumarlos,

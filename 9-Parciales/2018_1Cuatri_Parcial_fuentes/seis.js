@@ -1,6 +1,6 @@
 function mostrar()
 {
-var hora = prompt ("Ingrese una hora.") ;
+var hora = document.getElementById('laHora').value ;
 
 mensaje = "" ;
 hora = parseInt (hora) ;
@@ -37,9 +37,9 @@ switch (hora)
 	case 5 :
 	mensaje = "Es de noche." ;
 
-	if ( hora > 20 && hora < 24)
+	if ( hora > 19 && hora < 24)
 	{
-		mensaje = "Es de noche, a dormir." ;
+		mensaje = "A dormir." ;
 	}
 	
 	break ;

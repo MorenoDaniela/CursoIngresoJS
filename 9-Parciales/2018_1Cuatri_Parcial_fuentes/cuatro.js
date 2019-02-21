@@ -2,7 +2,7 @@
 function mostrar()
 {
 
-var compra ;
+ /* var compra ;
 var cantidadProductos ;
 var pagoEfectivoTarjeta ;
 
@@ -10,7 +10,7 @@ compra = prompt ("Por favor ingrese el monto de su compra") ;
 cantidadProductos = prompt ("Por favor ingrese la cantidad de productos comprados") ;
 pagoEfectivoTarjeta = prompt ("Si realiza su compra con efectivo ponga el numero 1, si es con tarjeta ingrese el numero 2") ;
 
-/* un solo alert en todo el codigo*/
+// un solo alert en todo el codigo//
 //parsear
  compra = parseInt (compra) ;
  cantidadProductos = parseInt (cantidadProductos) ;
@@ -36,5 +36,52 @@ pagoEfectivoTarjeta = prompt ("Si realiza su compra con efectivo ponga el numero
 		}
 
 		alert ("Precio final" +compra) ;
+*/
+
+var numeroUno = prompt ("Ingrese el importe") ;
+var numeroDos = prompt ("Ingrese el importe") ;
+var numeroTres = prompt ("Ingrese el importe") ;
+var numeroCuatro = prompt ("Ingrese el importe") ;
+var suma ;
+var descuento ;
+//var mensaje ;
+
+ numeroUno = parseInt (numeroUno) ;
+ numeroDos = parseInt (numeroDos) ;
+ numeroTres = parseInt (numeroTres) ;
+ numeroCuatro = parseInt (numeroCuatro) ;
+//descuento = parseInt (descuento) ;
+
+ suma = numeroUno + numeroDos + numeroTres + numeroCuatro ;
+
+if (suma > 100)
+{
+	descuento = suma * 0.9 ;
+	alert ("Precio final es " +descuento) ;
+
+	else 
+		{
+			if (suma < 50 && suma < 100)
+			{
+			descuento = suma * 0.95 ;
+			alert ("Precio final es" +descuento) ;
+
+				else
+				{
+					descuento = suma * 1.15 ;
+					alert ("Precio final es" +descuento) ;
+				}
+			}
+
+		}
+}
+
+	
+	
+
+
+
+
+
 
 }

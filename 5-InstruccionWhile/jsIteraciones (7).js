@@ -11,9 +11,11 @@ function mostrar()
 	{
 		numeroUno = prompt ("Ingrese un número.") ;
 		numeroUno = parseInt (numeroUno) ;
-		acumulador+=numeroUno;
-		contador++;
-		respuesta = prompt ("¿Quiere ingresar otro número?") ;
+		//acumulador+=numeroUno; es = que lo de abajo
+		acumulador = acumulador + numeroUno ;
+		//contador ++ ; es = que lo de abajo
+		contador = contador +1;
+		respuesta = prompt ("¿Quiere ingresar otro número? Responder sì.") ;
 	}
 
 

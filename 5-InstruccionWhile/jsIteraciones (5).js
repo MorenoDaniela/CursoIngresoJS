@@ -11,4 +11,9 @@ while (sexo != "f" && sexo != "m")
 
 document.getElementById('Sexo').value=sexo;
 
+/*
+ (!(sexo == "f" || sexo =="m"))
+ lo de arriba es lo mismo que lo de abajo
+(sexo != "f" && sexo != "m")
+ */
 }//FIN DE LA FUNCIÓN
