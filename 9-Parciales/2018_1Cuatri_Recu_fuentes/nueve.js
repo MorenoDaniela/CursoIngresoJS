@@ -41,7 +41,7 @@ function mostrar()
 		}
 
 
-		if (temperaturasPares%2==0)
+		if (temperatura%2==0)
 		{
 			temperaturasPares = temperaturasPares + 1 ;
 		}
@@ -68,10 +68,11 @@ function mostrar()
 			if (peso > pesoMinimo)
 			pesoMinimo = peso;
 			else 
-				if (peso < pesoMaximo)
+			{	if (peso < pesoMaximo)
 				{
 					pesoMaximo = peso;
 				}
+			}
 		}
 
 	respuesta = prompt ("Desea ingresar otro animal? si o no.");

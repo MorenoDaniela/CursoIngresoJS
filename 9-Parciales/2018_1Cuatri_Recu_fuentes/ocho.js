@@ -8,7 +8,7 @@ function mostrar()
 	var contadorImpares=0 ;
 	var positivo=0;
 	var negativo=0;
-	var promedio;
+	var promedio=0;
 	var maximo= -101;
 	var letraMaximo;
 	var minimo= 101;
@@ -93,5 +93,5 @@ function mostrar()
 	alert ("La cantidad de ceros es" +contadorCeros);
 	alert ("El promedio de todos los numeros positivos es" +promedio);
 	alert ("La suma de todos los numeros negativos es" +negativo);
-	alert ("El numero maximo es " +maximo+ " y su letra "+letraMaximo+ " el numero minimo es "+minimo*" y su letra " +letraMinimo);
+	alert ("El numero maximo es " +maximo+ " y su letra "+letraMaximo+ " el numero minimo es "+minimo+" y su letra " +letraMinimo);
 }
