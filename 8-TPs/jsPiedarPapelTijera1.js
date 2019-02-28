@@ -6,13 +6,12 @@ a su opción  y le informaremos si ganó, empató o perdió.
 */
 	var eleccionMaquina;
 	//var jugador;
-
+	var mensaje = "";
 	
 function comenzar()
 {
 	eleccionMaquina = Math.floor((Math.random() * 3) + 1);
-	//jugador = prompt ("Ingrese 1 para piedra, 2 para papel y 3 para tijera.");
-
+	console.log (eleccionMaquina);
 
 }//FIN DE LA FUNCIÓN
 function piedra()
@@ -20,17 +19,51 @@ function piedra()
 	switch (eleccionMaquina)
 	{
 		case 1 :
-
+		mensaje = "Empato.";
+		break;
+		case 2 :
+		mensaje = "Perdio";
+		break;
+		case 3 :
+		mensaje = "Gano.";
+		break;
+		
 	}
+alert (mensaje);
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-
+	switch (eleccionMaquina)
+	{
+		case 1 :
+		mensaje = "Perdiste";
+		break;
+		case 2 :
+		mensaje = "Empato";
+		break;
+		case 3 :
+		mensaje = "Gano.";
+		break;
+		
+	}
+alert (mensaje);
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
-
+	switch (eleccionMaquina)
+	{
+		case 1 :
+		mensaje = "Perdiste.";
+		break;
+		case 2 :
+		mensaje = "Ganaste";
+		break;
+		case 3 :
+		mensaje = "Empato";
+		break;
+		
+	}
+alert (mensaje);
 }//FIN DE LA FUNCIÓN

@@ -9,7 +9,7 @@ function mostrar()
 	var temperaturaAnimalPesado;
 	var animalesAMenosCero = 0;
 	var contadorPeso=0;
-	var promedio;
+	var promedio=0;
 	var pesoMaximo = 1001;
 	var pesoMinimo = 0;
 
@@ -50,30 +50,27 @@ function mostrar()
 		{
 			animalMasPesado = nombre;
 			temperaturaAnimalPesado = temperatura;
+			contadorPeso = contadorPeso + 1 ;
+			promedio = promedio + peso ;
 		}
 
 		if (temperatura <0)
 		{
 			animalesAMenosCero = animalesAMenosCero + 1;
-		}
 
-		if (peso>0)
-		{
-			contadorPeso = contadorPeso + 1 ;
-			promedio = contadorPeso + peso ;
-		}
-
-		if (temperatura <0)
-		{
-			if (peso > pesoMinimo)
-			pesoMinimo = peso;
+			if (peso < pesoMaximo)
+			{
+				pesoMaximo = peso;
+			}
 			else 
-			{	if (peso < pesoMaximo)
+			{	if (peso > pesoMinimo)
 				{
-					pesoMaximo = peso;
+					pesoMinimo = peso;
 				}
 			}
 		}
+
+	
 
 	respuesta = prompt ("Desea ingresar otro animal? si o no.");
 
