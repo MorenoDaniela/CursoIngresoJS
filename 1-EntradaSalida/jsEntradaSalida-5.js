@@ -1,18 +1,13 @@
 /*Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
 ej.: "Usted se llama José y tiene 66 años" 	*/
 function mostrar()
-{	var nombre ;
-	var edad ; 
-	nombre = elNombre.value ;
-	edad = laEdad.value ;
+{	
+	var nombre;
+	var edad;
 
-/*para concatenar se utiliza el signo + */
+	nombre = elNombre.value;
+	edad = laEdad.value;
 
-	alert (nombre+edad);
-
-/* se escribe entre comillas el texto, se cierra comillas, +variable+, comilla sigue con el texto comilla, +edad+ sigue el texto comilla.*/
-
-	alert ("Usted se llama " +nombre+" y tiene "+edad+" años");
-	
+	alert ("Usted se llama "+nombre+ " y tiene "+edad+ " años.");
 }
 

@@ -1,97 +1,93 @@
 function mostrar()
 {
-	var letra;
 	var numero;
-	var respuesta= "si" ;
-	var contadorPares= 0 ;
+	var letra;
+	var respuesta = "si";
+	var contador=0;
+	var contadorPares=0;
+	var contadorImpares=0;
 	var contadorCeros=0;
-	var contadorImpares=0 ;
-	var positivo=0;
-	var negativo=0;
-	var promedio=0;
-	var maximo= -101;
-	var letraMaximo;
-	var minimo= 101;
-	var letraMinimo;
+	var contadorPositivos=0;
+	var acumuladorPositivos=0;
+	var contadorNegativos=0;
+	var acumuladorNegativos=0;
+	var numMax=-101;
+	var letraMax;
+	var numMin=101;
+	var letraMin;
+	var promedio;
 
-	
-
-
-
-	while (respuesta != "no")
+	while (respuesta!="no")
 	{
-		numero = prompt ("Ingrese un numero entre -100 y 100.") ;
-		numero = parseInt (numero) ;
+		contador++;
+		numero = prompt ("Ingrese un numero entre -100 y 100.");
+		numero = parseInt (numero);
 
-		while (isNaN(numero) || numero < -100 || numero > 100)
+		while (isNaN(numero) || numero>101 || numero <-101)
 		{
-			numero = prompt ("ERROR, ingrese un numero entre -100 y 100.") ;
-			numero = parseInt (numero) ;
+			numero = prompt ("ERROR, ingrese un número válido entre -100 y 100.");
+			numero = parseInt (numero);
 		}
 
-		letra = prompt ("Ingrese una letra");
-
-		while (isNaN(letra ==true))
+		letra = prompt ("Ingrese una letra.");
+		while (isNaN(letra)==false)
 		{
-			letra = prompt ("ERROR, ingrese una letra válida") ;
+			letra = prompt ("ERROR, ingrese una letra.");
 		}
+
+		respuesta = prompt ("Responda no para dejar de ingresar.");
 
 		if (numero==0)
 		{
-			//contadorCeros + 1 ;
 			contadorCeros++;
 		}
-
-		if (numero % 2 == 0)
+		else
 		{
-			//contadorPares = contadorPares + 1 ;
-			contadorPares++;
-		}
-			else 
+			if (numero%2==0)
 			{
-				//contadorImpares = contadorImpares + 1 ;
-				contadorImpares++;
+				contadorPares++
 			}
-		
-		
-			
-	
+
+				else
+				{
+				contadorImpares++;
+				}
+		}
+
 
 		if (numero>0)
 		{
-			positivo= positivo + 1;
-			promedio = promedio + numero;
+			contadorPositivos++;
+			acumuladorPositivos = acumuladorPositivos +numero;
 		}
-			else
-			{
-				if (numero<0)
-				{
-					negativo = negativo + numero;
-				}
-			}
-		
 
-		if (numero < minimo)
+		else
 		{
-			minimo = numero;
-			letraMinimo = letra;
+			contadorNegativos++;
+			acumuladorNegativos = acumuladorNegativos + numero;
 		}
 
-		if (numero > maximo)
+		if (numero < numMin)
 		{
-			maximo = numero;
-			letraMaximo = letra;
+			numMin = numero;
+			letraMin = letra;
 		}
 
-		respuesta = prompt ("Desea ingresar otro nùmero? si o no");
+		if (numero > numMax)
+		{
+			numMax = numero;
+			letraMax = letra;
+		}
 	}
 
-	promedio = promedio / positivo;
-	
-	alert ("La cantidad de numeros pares es" +contadorPares);
-	alert ("La cantidad de numeros impares es" +contadorImpares);
-	alert ("La cantidad de ceros es" +contadorCeros);
-	alert ("El promedio de todos los numeros positivos es" +promedio);
-	alert ("La suma de todos los numeros negativos es" +negativo);
-	alert ("El numero maximo es " +maximo+ " y su letra "+letraMaximo+ " el numero minimo es "+minimo+" y su letra " +letraMinimo);
+	promedio = acumuladorPositivos / contadorPositivos;
+
+	alert ("La cantidad de numeros pares es "+contadorPares);
+	alert ("La cantidad de numeros impares es "+contadorImpares);
+	alert ("La cantidad de ceros es "+contadorCeros);
+	alert ("El promedio de todos los numeros positivos ingresados es "+promedio);
+	alert ("La suma de todos los numeros negativos es "+acumuladorNegativos);
+	alert ("El numero del maximo es "+numMax+ " y su letra es "+letraMax);
+	alert ("El numero minimo es "+numMin+ " y su letra es "+letraMin);
+
 }

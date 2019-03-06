@@ -1,12 +1,20 @@
 
 function mostrar()
 {
-var ancho = prompt ("Ingrese el ancho del rectangulo.");
-var largo = prompt ("Ingrese el largo del rectangulo") ;
-var perimetro ;
+	var ancho = prompt ("Ingrese el ancho de un rectangulo.");
+	var largo = prompt ("Ingrese el largo de un rectangulo.");
+	var perimetro;
 
-perimetro = (ancho * 2) + (largo * 2) ;
+	ancho = parseInt (ancho);
+	largo = parseInt (largo);
 
-alert ("El perimetro del rectangulo es " +perimetro) ;
+	perimetro = (ancho * 2) + (largo * 2);
+
+	alert ("El perimetro del rectangulo es "+perimetro);
 
 }
+/*
+Bienvenidos. 
+Realizar el algoritmo que pida el ancho y el largo de un rectángulo por prompt 
+y que muestre el perímetro por alert.
+*/

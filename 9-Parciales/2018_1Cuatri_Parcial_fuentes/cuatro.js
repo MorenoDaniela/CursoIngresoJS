@@ -1,87 +1,53 @@
-//al realizar una compra, si compra de mas de dos productos realiza un descuento del 10% y si supera los $2000 se agrega un descuento adicional del 15 %, si el pago es con tarjeta y no efectivo al precio final se le agrega un 10 % de recargo
+/*al realizar una compra, si compra de mas de dos productos realiza un descuento del 10% 
+y si supera los $2000 se agrega un descuento adicional del 15 %, 
+si el pago es con tarjeta y no efectivo al precio final se le agrega un 10 % de recargo*/
 function mostrar()
 {
 
- /* var compra ;
-var cantidadProductos ;
-var pagoEfectivoTarjeta ;
-
-compra = prompt ("Por favor ingrese el monto de su compra") ;
-cantidadProductos = prompt ("Por favor ingrese la cantidad de productos comprados") ;
-pagoEfectivoTarjeta = prompt ("Si realiza su compra con efectivo ponga el numero 1, si es con tarjeta ingrese el numero 2") ;
-
-// un solo alert en todo el codigo//
-//parsear
- compra = parseInt (compra) ;
- cantidadProductos = parseInt (cantidadProductos) ;
- pagoEfectivoTarjeta = parseInt (pagoEfectivoTarjeta) ;
-
-
-	if (cantidadProductos > 2)
+	var numeroUno;
+	var numeroDos;
+	var resultado;
+	numeroUno = prompt("Ingrese el primer numero");
+	numeroDos = prompt("Ingrese el segundo numero");
+	
+	if(numeroUno == numeroDos) //RECORDAR PONER doble ==
 	{
-		
-		if (compra > 2000)
+		resultado = numeroUno + numeroDos;
+		alert(resultado);
+	}
+	else
+	{
+		numeroUno = parseInt(numeroUno);
+		numeroDos = parseInt(numeroDos);
+		if(numeroUno > numeroDos)
 		{
-			compra = compra * 0.75 ;
+			resultado = numeroUno - numeroDos;
+			alert(resultado);
 		}
 		else
 		{
-			compra =  compra * 0.9 ;
-		}
-	}
-	if (pagoEfectivoTarjeta == 2)
-		{
-			compra = compra * 1.1 ;
-			// compra = compra * 1,1 ; numero con coma no va
-		}
-
-		alert ("Precio final" +compra) ;
-*/
-
-var numeroUno = prompt ("Ingrese el importe") ;
-var numeroDos = prompt ("Ingrese el importe") ;
-var numeroTres = prompt ("Ingrese el importe") ;
-var numeroCuatro = prompt ("Ingrese el importe") ;
-var suma ;
-var descuento ;
-//var mensaje ;
-
- numeroUno = parseInt (numeroUno) ;
- numeroDos = parseInt (numeroDos) ;
- numeroTres = parseInt (numeroTres) ;
- numeroCuatro = parseInt (numeroCuatro) ;
-//descuento = parseInt (descuento) ;
-
- suma = numeroUno + numeroDos + numeroTres + numeroCuatro ;
-
-if (suma > 100)
-{
-	descuento = suma * 0.9 ;
-	alert ("Precio final es " +descuento) ;
-
-	else 
-		{
-			if (suma < 50 && suma < 100)
+			resultado = numeroUno + numeroDos;
+			if (resultado > 10)
 			{
-			descuento = suma * 0.95 ;
-			alert ("Precio final es" +descuento) ;
-
-				else
-				{
-					descuento = suma * 1.15 ;
-					alert ("Precio final es" +descuento) ;
-				}
+				alert("La suma es " + resultado + " y supero el 10");
 			}
+			else
+			{
+				alert(resultado);
+			}
+		}	
+	}
+					
+			
+		
 
-		}
+
+
 }
-
-	
-	
-
-
-
-
-
-
-}
+/*Bienvenidos (IF). 
+Pedir dos números y mostrar el resultado: 
+Si son iguales los muestro concatenados. 
+Si el primero es mayor, los resto, 
+de lo contrario los sumo. 
+Si la suma es mayor a 10 ,además de mostrar el resultado, muestro el mensaje 
+"la suma es xxx y supero el 10".*/

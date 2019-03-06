@@ -1,7 +1,15 @@
 function mostrar()
 {
- var nombre = document.getElementById('elNombre').value ;
- var localidad = document.getElementById('laLocalidad').value ;
+	var nombre;
+	var localidad ;
 
- alert ("Usted es "+nombre+ " y vive en la localidad de " +localidad) ;
+	nombre = elNombre.value;
+	localidad = laLocalidad.value;
+
+	alert ("Usted es "+nombre+ " y vive en la localidad de "+localidad);
+
 }
+/*
+Bienvenidos. 
+mostrar * en un solo alert * el mensaje "usted es xxxxx y vive en la localidad de xxxxxxxx".
+*/

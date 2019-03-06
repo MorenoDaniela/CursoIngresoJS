@@ -1,41 +1,44 @@
 function mostrar()
 {
-	var numeroUno ;
-	var numeroDos ;
-	var resultado ;
+	var numeroUno = prompt ("Ingrese un numero.");
+	var numeroDos = prompt ("Ingrese otro número");
+	var suma;
 
-	numeroUno = prompt ("Por favor ingrese un numero") ;
-	numeroDos = prompt ("Por favor ingrese un segundo numero") ;
+	
+	
 
-		if (numeroUno == numeroDos)
-		{
-			resultado = numeroUno + numeroDos ;
-			alert (resultado) ;
+	if (numeroUno==numeroDos)
+	{
+		alert (numeroUno + numeroDos);
+	}
+	else
+		if (numeroUno>numeroDos)
+		{	numeroUno = parseInt (numeroUno);
+			numeroDos = parseInt (numeroDos);
+			alert (numeroUno/numeroDos);
 		}
-		else 
-		{
-			numeroUno = parseInt (numeroUno) ;
-			numeroDos = parseInt (numeroDos) ;
-
-			if (numeroUno > numeroDos)
-			{
-				resultado = numeroUno / numeroDos ;
-				alert (resultado) ;
+		else
+			if (numeroDos>numeroUno)
+			{	
+				numeroUno = parseInt (numeroUno);
+				numeroDos = parseInt (numeroDos);
+				suma = numeroUno + numeroDos;
+				alert (suma);
 			}
 
-			else //(numeroUno < numeroDos) no va
-			{
-				resultado = numeroUno + numeroDos ;
-				if (resultado < 50)
-				{
-					//alert (resultado);
-					alert ("La suma es " +resultado+ "y es menor a 50.") ;
-				}
-				else
-				{
-					alert (resultado) ;
-				}
-			}
-
-		}
+	if (suma<50)
+	{
+		alert ("La suma es "+suma+ " y es menor a 50.");
+	}
+			
 }
+/*
+Bienvenidos. 
+(IF)Pedir dos números y mostrar el resultado: 
+Si son iguales los muestro concatenados. 
+Si el primero es mayor, los divido, 
+de lo contrario los sumo. 
+Si la suma es menor a 50 ,además de mostrar el resultado, 
+muestro el mensaje 
+"la suma es xxx y es menor a 50".
+*/

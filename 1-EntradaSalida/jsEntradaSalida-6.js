@@ -4,21 +4,20 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 { 
 
-	var primerNumero ;
-	var segundoNumero ;
-	var suma ;
+	var numero1;
+	var numero2;
+	var suma;
 
+	numero1 = numeroUno.value;
+	numero2 = numeroDos.value;
 
-	primerNumero = numeroUno.value ;
-	segundoNumero = numeroDos.value ;
+	numero1 = parseInt(numero1);
+	numero2 = parseInt (numero2);
 
+	suma = numero1 + numero2 ;
 
-	primerNumero = parseInt (primerNumero) ;
-	segundoNumero = parseInt (segundoNumero) ;
-	suma = primerNumero+segundoNumero ;
+	alert ("La suma es "+suma);
 
-	alert(primerNumero+segundoNumero) ;
-	alert ("La suma es:" +suma) ;
 
 }
 

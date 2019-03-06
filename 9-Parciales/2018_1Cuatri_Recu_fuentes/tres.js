@@ -1,13 +1,20 @@
 function mostrar()
 {
-var precio = prompt ("Ingrese el precio.") ;
-var descuento = prompt ("Ingrese el descuento.") ;
-var precioFinal ;
+	var precio = prompt ("Ingrese el precio.");
+	var porcentaje = prompt ("Ingrese el porcentaje de descuento.");
+	var precioFinal;
 
-precio = parseInt (precio) ;
-descuento = parseInt (descuento) ;
+	precio = parseInt (precio);
+	porcentaje = parseInt (porcentaje);
 
-precioFinal = precio - (descuento * precio) / 100 ;
 
-document.getElementById('elPrecioFinal').value = precioFinal;
+	precioFinal = precio - (porcentaje * precio) / 100;
+
+	elPrecioFinal.value = precioFinal;
 }
+/*
+Bienvenidos. 
+Pedir por prompt el precio y el porcentaje de descuento, 
+mostrar el precio final con descuento por id.
+Curso de ingreso UTN FRA
+*/

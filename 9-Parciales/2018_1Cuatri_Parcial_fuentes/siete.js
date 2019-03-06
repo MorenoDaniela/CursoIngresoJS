@@ -1,51 +1,71 @@
 function mostrar()
 {	
-	var numero = prompt ("Ingrese nota entre 0 y 10.") ;
-	var sexo = prompt ("Ingrese f ó m .") ;
-	var contador=0 ;
-	var promedio ;
+	var nota;
+	var sexo;
+	var contador = 0;
+	var promedio;
 	var acumulador= 0;
-	var notaMasBaja ;
-	var sexoNotaBaja ;
-	var contadorVarones=0 ;
+	var notaBaja;
+	var sexoBaja;
+	var contadorVarones = 0;
 
-	numero = parseInt (numero) ;
-
-	while (contador >5)
+	while (contador<5)
 	{
-		if (numero <=10 || numero >=0)
+		contador++;
+		nota = prompt ("Ingrese una nota entre 0 y 10.");
+		nota = parseInt (nota);
+
+		while (nota>10 || nota<0)
 		{
-			numero = prompt ("Ingrese una nota entre 0 y 10.") ;
+			nota = prompt ("ERROR, ingrese una nota válida entre 0 y 10.");
+			nota = parseInt (nota);
+
 		}
-			if (!= sexo == "f" || sexo == "m")
-			{
-				sexo = prompt ("Ingrese un sexo válido, f ó m.") ;
-			}
-			if (contador==1)
-			{
-				notaMasBaja = numero ;
-				sexoNotaBaja = sexo ;
-			}
+
+		sexo = prompt ("Ingrese el sexo, f o m.");
+
+		while (sexo != "f" && sexo != "m")
+		{
+			sexo = prompt ("ERROR, ingrese sexo válido, f o m.");
+		}
+
+		if (contador==1)
+		{
+			notaBaja=nota;
+			sexoBaja=sexo;
+		}
 			else
 			{
-				if (numero<notaMasBaja)
+				if (nota<notaBaja)
 				{
-					notaMasBaja = numero ;
-					sexoNotaBaja = sexo ;
+					notaBaja=nota;
+					sexoBaja=sexo;
 				}
 			}
-			if (sexo == "m" && numero >= 6)
-			{
-				contadorVarones = contadorVarones + 1 ;
-			}
+		
+
+		if (nota>=6 && sexo == "m")
+		{
+			contadorVarones++;
+		}
+
+		acumulador = acumulador + nota;
+
 	}
-	
-	contador = contador +1 ;
-	acumulador = acumulador + numero ;
-	promedio = acumulador / 5 ;
 
-	alert ("El promedio de las notas totales es: " +promedio) ;
-	alert ("La nota mas baja es " +notaMasBaja+ " y el sexo de esa persona es: " +sexoNotaBaja) ;
-	alert ("Cantidad de varones que su nota fue mayor o igual a 6 es: " +contadorVarones) ;
+		
 
+	promedio = acumulador / contador;
+
+	alert ("El promedio de las notas totales es:"+promedio);
+	alert ("La nota mas baja es " +notaBaja+ " y el sexo de esa persona es "+sexoBaja);
+	alert ("La cantidad de varones que su nota haya sido mayor o igual a 6 es: "+contadorVarones);
 }
+/*
+Bienvenidos. 
+Realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10) ,
+ el sexo (validar el sexo “f” o “m”) de 5 alumnos, informar por alert: 
+a) El promedio de las notas totales. 
+b) La nota más baja y el sexo de esa persona. 
+c) La cantidad de varones que su nota haya sido mayor o igual a 6.
+*/

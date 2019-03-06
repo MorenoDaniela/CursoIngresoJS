@@ -1,86 +1,97 @@
 function mostrar()
 {
-	var nombre;
+	var animal;
 	var peso;
 	var temperatura;
+	var contador=0;
 	var respuesta = "si";
-	var temperaturasPares=0;
-	var animalMasPesado;
-	var temperaturaAnimalPesado;
-	var animalesAMenosCero = 0;
-	var contadorPeso=0;
+	var contadorPares=0;
+	var contadorMenosCero=0;
+	var acumuladorPeso=0;
 	var promedio=0;
-	var pesoMaximo = 1001;
-	var pesoMinimo = 0;
+	var pesoMax=0;
+	var pesoMin=1001;
+	var animalMax;
+	var temperaturaMax;
 
-
-	
-
-	while (respuesta != "no")
+	while (respuesta=!"no")
 	{
-		nombre = prompt ("Ingrese el nombre del animal.");
-		while (isNaN(nombre ==true))
-		{
-			nombre = prompt ("ERROR, ingrese el nombre del animal.")
-		}
+		contador++;
+		animal = prompt ("Ingrese el nombre del animal.");
 
-		peso = prompt ("Ingrese el peso del animal, entre 0 y 1000.");
+		peso = prompt ("Ingrese el peso del animal entre 1 y 1000.");
 		peso = parseInt (peso);
-		while (isNaN(peso) || peso<0 || peso>1000)
+
+		while (isNaN(peso) || peso>1000 || peso<1)
 		{
-			peso = prompt ("ERROR, ingrese el peso del animal, entre 0 y 1000.");
-			peso = parseInt(peso);
+			peso = prompt ("ERROR, ingrese el peso del animal entre 1 y 1000.");
+			peso = parseInt (peso);
 		}
 
-		temperatura = prompt ("Ingrese la temperatura del habitat.");
+		temperatura = prompt ("Ingrese la temperatura del habitat, entre -30 y 30 grados.");
 		temperatura = parseInt (temperatura);
-		while (isNaN(temperatura) || temperatura < -30 || temperatura > 30)
+
+		while (isNaN(temperatura) || temperatura >30 || temperatura <-30)
 		{
-			temperatura = prompt ("ERROR, ingrese la temperatura del habitat.");
-			temperatura = parseInt (temperatura);
+			temperatura = prompt ("ERROR, ingrese una temperatura válida entre -30 y 30.");
+			temperatura = parseInt(temperatura);
 		}
 
+		respuesta = prompt ("Ingrese no para dejar de ingresar animales.");
 
 		if (temperatura%2==0)
 		{
-			temperaturasPares = temperaturasPares + 1 ;
+			contadorPares++;
 		}
+
+		if (temperatura<0)
+		{
+			contadorMenosCero++;
+		}
+
+			else
+			{
+				if (peso<pesoMin)
+				{
+					pesoMin=peso;
+				}
+
+				else
+				{
+					if (peso>pesoMax)
+					{
+						pesoMax=peso;
+						animalMax = animal;
+						temperaturaMax = temperatura;
+					}
+				}
+			}
 
 		if (peso>0)
 		{
-			animalMasPesado = nombre;
-			temperaturaAnimalPesado = temperatura;
-			contadorPeso = contadorPeso + 1 ;
-			promedio = promedio + peso ;
+			acumuladorPeso = acumuladorPeso + peso;
 		}
 
-		if (temperatura <0)
-		{
-			animalesAMenosCero = animalesAMenosCero + 1;
-
-			if (peso < pesoMaximo)
-			{
-				pesoMaximo = peso;
-			}
-			else 
-			{	if (peso > pesoMinimo)
-				{
-					pesoMinimo = peso;
-				}
-			}
-		}
-
-	
-
-	respuesta = prompt ("Desea ingresar otro animal? si o no.");
 
 	}
 
-promedio = promedio / contadorPeso;
+	promedio = acumuladorPeso / contador;
 
-alert ("La cantidad de temperaturas pares es " +temperaturasPares);
-alert ("El nombre del animal mas pesado es" +animalMasPesado+ " y su temperatura es " +temperaturaAnimalPesado);
-alert ("La cantidad de animales que viven a menos de 0 grados es " +animalesAMenosCero);
-alert ("El promedio del peso de todos los animales es: "+promedio);
-alert ("El peso maximo de los animales bajo cero es" +pesoMaximo+" y el minimo es " +pesoMinimo);
+	alert ("La cantidad de temperaturas pares es "+contadorPares);
+	alert ("El nombre del animal mas pesado es "+animalMax+ " y su temperatura es "+temperaturaMax);
+	alert ("La cantidad de animales que viven a menos de 0 grados es "+contadorMenosCero);
+	alert ("El promedio del peso de todos los animales es "+promedio);
+	//alert ("El peso maximo " +pesoMax+ " y el minimo "+pesoMin+ " de todos los animales cuyan temperaturas sean bajo 0.");
 }
+/*
+Bienvenidos. 
+Realizar el algoritmo que permita ingresar el nombre de un animal del zoológico,
+ el peso el cual debe ser entre 1 y 1000 y 
+la temperatura del hábitat (entre -30 y 30) hasta que el usuario quiera 
+e informar al terminar el ingreso por document.write: 
+a) La cantidad de temperaturas pares. 
+b) El nombre y temperatura del animal más pesado 
+c) La cantidad de animales que viven a menos de 0 grados. 
+d) El promedio del peso de todos los animales.	
+f) El peso máximo y el mínimo de todos los animales cuyas temperaturas sean bajo cero.
+*/
