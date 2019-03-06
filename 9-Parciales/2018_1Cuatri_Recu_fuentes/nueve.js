@@ -14,7 +14,7 @@ function mostrar()
 	var animalMax;
 	var temperaturaMax;
 
-	while (respuesta=!"no")
+	while (respuesta!="no")
 	{
 		contador++;
 		animal = prompt ("Ingrese el nombre del animal.");
@@ -48,28 +48,27 @@ function mostrar()
 		{
 			contadorMenosCero++;
 		}
-
-			else
-			{
 				if (peso<pesoMin)
 				{
 					pesoMin=peso;
 				}
-
-				else
-				{
 					if (peso>pesoMax)
 					{
 						pesoMax=peso;
-						animalMax = animal;
-						temperaturaMax = temperatura;
+						
 					}
-				}
-			}
+				
 
 		if (peso>0)
 		{
 			acumuladorPeso = acumuladorPeso + peso;
+		}
+
+		if (peso>pesoMax)
+		{
+			pesoMax = peso;
+			animalMax = animal;
+			temperaturaMax = temperatura;
 		}
 
 
@@ -81,7 +80,7 @@ function mostrar()
 	alert ("El nombre del animal mas pesado es "+animalMax+ " y su temperatura es "+temperaturaMax);
 	alert ("La cantidad de animales que viven a menos de 0 grados es "+contadorMenosCero);
 	alert ("El promedio del peso de todos los animales es "+promedio);
-	//alert ("El peso maximo " +pesoMax+ " y el minimo "+pesoMin+ " de todos los animales cuyan temperaturas sean bajo 0.");
+	alert ("El peso maximo " +pesoMax+ " y el minimo "+pesoMin+ " de todos los animales cuyan temperaturas sean bajo 0.");
 }
 /*
 Bienvenidos. 
